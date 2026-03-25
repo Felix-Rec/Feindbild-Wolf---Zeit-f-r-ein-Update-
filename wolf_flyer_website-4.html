@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zeit für ein Update</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f7f3eb;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://wwf-jugend.de/wp-content/uploads/2026/02/federico-di-dio-photography-9y-XkkOk2XI-unsplash-scaled.webp') center/cover;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    header h1 {
+      font-size: 3em;
+      margin: 0;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 1s ease forwards;
+    }
+
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 1s ease forwards;
+      animation-delay: 0.4s;
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 40px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      max-width: 700px;
+    }
+
+    /* Versetztes Layout */
+    .card:nth-child(odd) {
+      margin-left: 0;
+      margin-right: auto;
+      transform: translateX(-20px);
+    }
+
+    .card:nth-child(even) {
+      margin-left: auto;
+      margin-right: 0;
+      transform: translateX(20px);
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    /* Overlay für vergrößerte Karte */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .overlay.active {
+      display: flex;
+    }
+
+    .card.active {
+      position: relative;
+      transform: scale(1.2);
+      z-index: 1001;
+      max-width: 600px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #222;
+      color: white;
+    }
+
+    button {
+      padding: 18px 36px;
+      border: none;
+      background: #5f9e6e;
+      color: white;
+      border-radius: 40px;
+      cursor: pointer;
+      font-size: 1.2em;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      margin: 12px;
+      transition: all 0.25s ease;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+      animation: wobble 3s ease-in-out infinite;
+    }
+
+    button:first-child {
+      background: #4f8f5f;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.25);
+      transform: scale(1.03);
+    }
+
+    button:hover {
+      background: #8b2f2f;
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    }
+
+    @keyframes wobble {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-3px); }
+    }
+
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Feindbild Wolf - Zeit für ein Update!</h1>
+  <p>Wie du dich engagieren kannst!</p>
+</header>
+
+<section>
+  <div class="card">
+    <h2>Warum reden alle über Wölfe?</h2>
+  <p>Seit über 25 Jahren lebt der Wolf wieder in Deutschland. Seit seiner Rückkehr hat er sich weit verbreitet, 
+      wobei die größten Populationen in Nord- und Ostdeutschland beheimatet sind. Und diese Populationen 
+    wachsen prächtig 
+      Mittlerweile leben 209 Rudel, 46 Wolfspaare und 19 einzelne Wölfe in Deutschland. Das sind ungefähr
+      1.800 bis 3.000 Wölfe.</p></div>
+  <div class="card">
+    <h2>Warum das super für unsere Natur ist.</h2>
+    <p>Als großes Raubtier ist der Wolf der einzige natürliche Fressfeind von Hirschen, Rehen und Wildschweinen. 
+    Da Wolfsrudel ständig in Bewegung sind, wandert auch das Wild. So treiben Wölfe beispielsweise die 
+      Hirsche hin und her. Dadurch wird verhindert, dass sich die Hirsche zu lange an einem 
+    Ort aufhalten und dort die jungen Pflanzen und Baumtriebe wegfressen. Der Wald kann dort also wachsen und sich erneuern. Dies zieht wiederum andere Tiere wie 
+    Vögel, kleine Säugetiere und Inseksten an, die im dichten Unterholz neuen Lebensraum finden.
+    Mit der Rückkehr der Wölfe steigt also der Artenreichtum von Pflanzen und Tieren.</p>
+  </div>
+  <div class="card">
+    <h2> Bringt der Wolf auch Probleme mit sich?</h2>
+    <p>Eigentlich nicht! Eigentlich? Für uns Menschen ist der Wolf, solange wir uns respektvoll verhalten, keine Gefahr. Allerdings zählen auch Weidetiere 
+    wie Schafe oder Ziegen zur Beute des Wolfes. Leider sind viele der Weiden, auf denen diese 
+    Tiere leben, nicht gut genug geschützt, sodass die Wölfe auf die Weiden gelangen und Schafe und Ziegen 
+    fressen können. Das bedeutet aber auch, dass die Bauern und Landwirte vielleicht nicht mehr ausreichend Fleisch, Wolle 
+      oder Milch bekommen, um genug Geld zu verdiehen. Das bedeutet, dass die Bauern und Landwirte durch den Wolf Geld verlieren können. Deshalb haben viele Landwirte Angst vor den Wölfen und wollen sie am liebsten wieder loswerden.</p>
+  </div>
+  <div class="card">
+    <h2>Kann man die Weidetiere schützen?</h2>
+    <p>Ja. Hierzu sind aber gute Zäune und manchmal auch Herdenschutzhunde nötig. Maßnahmen wie diese 
+      sind jedoch sehr teuer und mit hohem körperlichem Aufwand verbunden. Die Zäune müssen hoch genug sein, genug Strom leiten und dürfen keinen Kontakt zu 
+      langem
+    Gras haben, damit der Strom nicht in dem Boden geleitet wird und verloren geht. Die Hunde müssen gezüchtet, 
+      sehr lange ausgebildet und verpflegt werden.
+      Das heißt, sie brauchen Futter und regelmäßge
+     Gesundheitschecks.</p>
+  </div>
+
+  <div class="card">
+    <h2>Was ist die Lösung?</h2>
+    <p>Du kannst Teil der Lösung sein! Mit deiner Arbeit kann den Landwirten, und so auch dem Wolf, geholfen werden. In Freiwilligendiensten wie dem 
+    FÖJ (Freiwilliges Ökologisches Jahr) ist es unter anderem deine Aufgabe, Weidezäune zu errichten, diese vor zu langem Gras 
+      bewahren und tägliche Checks zum aktuellen Zustand des Zaunes durchzuführen. Und wer bezahlt das?
+    Dein Einsatz im FÖJ wird mit staatlichen Mitteln gefördert. Und so wird ein rundes Ding draus! Mit staatlichen Fördermitteln 
+      und deiner Hilfe auf der Weide kann das Problem der Landwirte - und des Wolfs! - im Handumdrehen gelöst werden!
+    BIST DU DABEI?</p>
+  </div>
+
+  <div style="text-align:center; margin-top:30px;">
+    <button onclick="window.open('https://www.jugendfreiwilligendienste.de', '_blank')">Mitmachen</button>
+    <button onclick="window.open('https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.bundesumweltministerium.de/themen/artenschutz/nationaler-artenschutz/der-wolf-in-deutschland/ueberblick-der-wolf-in-deutschland&ved=2ahUKEwihxMO-hbmTAxWCywIHHUeaMBcQFnoECDYQAQ&usg=AOvVaw39qkxuc-FGL-Z5ifKCZFAg', '_blank')">Mehr erfahren</button>
+  </div>
+</section>
+
+<div class="overlay" id="overlay"></div>
+
+<footer>
+  <p>Felix Reclam 2026</p>
+</footer>
+
+<script>
+  const cards = document.querySelectorAll('.card');
+  const overlay = document.getElementById('overlay');
+
+  cards.forEach(card => {
+    card.addEventListener('click', () => {
+      card.classList.add('active');
+      overlay.classList.add('active');
+    });
+  });
+
+  overlay.addEventListener('click', () => {
+    document.querySelectorAll('.card.active').forEach(c => c.classList.remove('active'));
+    overlay.classList.remove('active');
+  });
+</script>
+
+</body>
+</html>
